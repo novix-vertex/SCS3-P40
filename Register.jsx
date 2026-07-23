@@ -13,6 +13,11 @@ const Register = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setUsers([...users, formdata]);
+        setFormdata({
+            name: "",
+            email: "",
+            password: ""
+        });
     }
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -26,7 +31,9 @@ const Register = (props) => {
                     <div>
                         <label className="block text-gray-700 mb-2">Name</label>
                         <input
+                            required
                             onChange={handleChange}
+                            value={formdata.name}
                             name="name"
                             type="text"
                             placeholder="Enter your name"
@@ -37,7 +44,9 @@ const Register = (props) => {
                     <div>
                         <label className="block text-gray-700 mb-2">Email</label>
                         <input
+                            required
                             onChange={handleChange}
+                            value={formdata.email}
                             name="email"
                             type="email"
                             placeholder="Enter your email"
@@ -48,7 +57,9 @@ const Register = (props) => {
                     <div>
                         <label className="block text-gray-700 mb-2">Password</label>
                         <input
+                            required
                             onChange={handleChange}
+                            value={formdata.password}
                             name="password"
                             type="password"
                             placeholder="Create a password"

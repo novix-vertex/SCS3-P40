@@ -1,6 +1,9 @@
+import Form1 from "./Form1"
+
 const App = () => {
+
   return (
-    <div className="h-screen bg-[#030712] text-white">App</div>
+    <Form1 />
   )
 }
 

@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-const Login = (props) => {
-    const { setToggle } = props;
+const Login = ({ setToggle }) => {
     const [formdata, setFormdata] = useState({});
     const handleChange = (e) => {
         setFormdata({ ...formdata, [e.target.name]: e.target.value });
@@ -41,7 +40,7 @@ const Login = (props) => {
                         />
                     </div>
 
-                    <button 
+                    <button
                         type="submit"
                         className="cursor-pointer active:scale-[0.97] w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
                     >

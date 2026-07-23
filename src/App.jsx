@@ -5,10 +5,12 @@ import Register from "../Register";
 const App = () => {
 
   const [toggle, setToggle] = useState(true);
+  const [users, setUsers] = useState([]);
+  console.log(users);
   return (
     // <Form1 />
     // <Form2 />
-    toggle ? <Login setToggle={setToggle}/> : <Register setToggle={setToggle}/>
+    toggle ? <Login setToggle={setToggle} /> : <Register setUsers={setUsers} setToggle={setToggle} />
   )
 }
 

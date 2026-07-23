@@ -1,18 +1,15 @@
 import { useState } from "react";
 
-const Register = (props) => {
-    const { setToggle } = props;
-    const [users, setUsers] = useState([]);
-
+const Register = ({setToggle,setUsers}) => {
+    
     const [formdata, setFormdata] = useState({});
 
-    console.log(users);
     const handleChange = (e) => {
         setFormdata({ ...formdata, [e.target.name]: e.target.value });
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        setUsers([...users, formdata]);
+        setUsers((prev)=>[...prev,setFormdata]);
         setFormdata({
             name: "",
             email: "",

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Form1 = () => {
+    //Using separate state for each input and onChange
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
